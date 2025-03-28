@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Press - CULTURA</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<style>
+/* Estilos gerais */
+body {
+    padding-top: 70px; /* Ajuste conforme o tamanho da sua navbar */
+    background-color: #f2f0f0; /* Cor de fundo suave */
+    font-family: 'Roboto', sans-serif; /* Fonte moderna */
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #800000; /* Cor vinho para títulos */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #800000; /* Cor vinho */
+    color: white; /* Cor do texto na navbar */
+    padding: 15px 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand, .navbar .nav-link {
+    color: white; /* Cor do texto dos links */
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.navbar .navbar-brand:hover, .navbar .nav-link:hover {
+    color: #ffd700; /* Cor dourada para hover */
+}
+
+/* Navbar quando colapsada */
+.navbar-toggler-icon {
+    background-color: white; /* Ícone de menu de cor branca */
+}
+
+/* Navbar fixada no topo */
+body {
+    padding-top: 70px; /* Ajuste do topo para navbar fixa */
+}
+
+.navbar-nav .nav-item {
+    padding: 10px 15px; /* Melhor espaçamento nos itens da navbar */
+}
+
+/* Cartões de artigo */
+.article-card {
+    border: 1px solid #800000; /* Borda de cor vinho */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article-card:hover {
+    transform: translateY(-5px); /* Efeito de levitação no hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Aumento da sombra */
+}
+
+.article-title {
+    color: #800000; /* Cor vinho para o título */
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.article-excerpt {
+    color: #333333;
+    font-size: 1rem;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: #800000; /* Cor vinho para o botão */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #6f0000; /* Tom mais escuro para o hover do botão */
+    transform: scale(1.05); /* Efeito de ampliação */
+}
+
+/* Estilo para o Footer */
+.main-footer {
+    background-color: #111; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto */
+    padding: 60px 0; /* Mais espaçamento no topo e fundo */
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logos e texto do footer */
+.main-footer .footer-logo {
+    width: 120px; /* Tamanho ajustado para o logo */
+    margin-bottom: 20px;
+}
+
+/* Estilo para as colunas do footer */
+.main-footer .col-md-4 {
+    margin-bottom: 30px;
+}
+
+/* Títulos no footer */
+.main-footer h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #ffd700; /* Cor dourada para os títulos */
+    text-transform: uppercase;
+}
+
+/* Texto de copyright */
+.main-footer .copyright {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 20px;
+}
+
+/* Links nas redes sociais */
+.social-links a {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-right: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffd700; /* Cor dourada no hover */
+    transform: scale(1.1); /* Leve ampliação no hover */
+}
+
+/* Botões de Termos de Uso e Política de Privacidade */
+.main-footer .btn-outline-light {
+    border-color: #ffd700;
+    color: #ffd700;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.main-footer .btn-outline-light:hover {
+    background-color: #ffd700;
+    color: #111; /* Texto escuro no hover */
+    transform: scale(1.05);
+}
+
+/* Separação entre as colunas */
+.main-footer .row {
+    border-top: 1px solid #444; /* Linha sutil de separação */
+    padding-top: 20px;
+}
+
+/* Responsividade - Asegurando que o footer e navbar se ajustem bem em dispositivos móveis */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        font-size: 1rem;
+    }
+
+    .main-footer h4 {
+        font-size: 1rem;
+    }
+
+    .main-footer .col-md-4 {
+        text-align: center;
+    }
+
+    .main-footer .social-links a {
+        margin-right: 15px;
+        font-size: 1.2rem;
+    }
+}
+
+</style>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <div class="logo">
+                    <img src="Imagens/logo.png" alt="Vision Press" width="50">
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="CULTURA.html">Cultura</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Desporto.html">Desporto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Economia.html">Economia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Internacional.html">Internacional</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Politica.html">Política</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Sociedade.html">Sociedade</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Conteúdo Principal -->
+            <main class="col-lg-8">
+                <section class="main-content">
+                    <div class="article-card">
+                        <h1 class="article-title">
+                            INTERNACIONAL
+                        </h1>
+                        <p class="data">Publicado em: 25/03/2025</p>
+                        <h2 class="article-title">GUERRA ISRAEL-PALESTINA </h2>
+                        <img src="Imagens/1.1.1.jpeg" alt="Justiça" class="img-fluid">
+                        <p class="article-text">Após nove meses de conflito entre Israel e Hamas, palestinos expressam ceticismo sobre um cessar-fogo próximo. Mediadores internacionais renovaram esforços e o Hamas parece ter recuado de uma exigência-chave para encerrar a guerra. No entanto, o grupo quer garantias de que Israel continuará negociando um cessar-fogo permanente.
+
+                            O primeiro-ministro israelense, Benjamin Netanyahu, afirmou estar aberto a uma pausa na guerra para um acordo de reféns, mas reiterou o objetivo de eliminar o Hamas. O conflito começou com um ataque do Hamas em 7 de outubro, que matou 1.200 pessoas e fez 250 reféns. Em resposta, a ofensiva israelense já deixou mais de 38.000 palestinos mortos, segundo o Ministério da Saúde de Gaza.</p>                
+                    </div>
+                    <div class="article-card">
+                        <p class="data">Publicado em: 25/03/2025</p>
+                        <h2 class="article-title">Chuvas Torrenciais Deixam Mil Casas Destruídas na Cidade do Cabo</h2>
+                        <img src="Imagens/2.1.1.jpeg" alt="Eleições" class="img-fluid">
+                        <p class="article-excerpt">Quase 1.000 casas em assentamentos informais na Cidade do Cabo, África do Sul, foram destruídas por ventos fortes, deixando cerca de 4.000 pessoas desabrigadas. As autoridades meteorológicas alertam para novas frentes frias até sexta-feira, com chuvas intensas, ventos fortes e risco de inundações.
+
+                            Os assentamentos mais pobres, como Khayelitsha, foram os mais afetados. A organização Gift of the Givers distribuiu 10.000 refeições e 3.000 cobertores às vítimas. Além disso, inundações e cortes de energia atingiram mais de 30 subúrbios.
+                            
+                            A Cidade do Cabo, frequentemente afetada por frentes frias do Atlântico durante o inverno, monitora os níveis das represas para evitar transbordamentos, considerando uma liberação controlada de água devido às previsões de mais chuvas.</p>
+                        <p class="por">Por: Redacção </p>
+                    </div>
+                    <div class="article-card">
+                        <p class="data">Publicado em: 25/03/2025</p>
+                        <h2 class="article-title">MORADORES DA CIDADE DE GAZA FORAM EVACUADOS</h2>
+                        <img src="Imagens/3.1.1.jpg" alt="Eleições" class="img-fluid">
+                        <p class="article-excerpt">Israel emitiu novas ordens de evacuação na Cidade de Gaza, forçando milhares de moradores a abandonar suas casas. No domingo, homens, mulheres e crianças foram vistos saindo, muitos ajudando familiares idosos ou feridos.
+
+                            Os intensos bombardeios e operações terrestres israelitas deslocaram a maioria dos 2,3 milhões de habitantes de Gaza, muitos deles mais de uma vez. Estima-se que 85.000 pessoas deixaram o distrito de Shujaiyah na última semana, enquanto pelo menos 66.700 foram deslocadas do leste de Khan Younis e Rafah.
+                            
+                            Enquanto o conflito continua, o Hamas pareceu flexibilizar sua exigência inicial de que Israel cessasse completamente a guerra antes de negociar um cessar-fogo, possivelmente devido à destruição massiva em Gaza.</p>
+                        <p class="por">Por: Nhamoneque Da Silva  </p>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="col-lg-4">
+                <!-- About Us -->
+                <div class="sidebar-widget about-widget">
+                    <h3 class="widget-title">Sobre Nós</h3>
+                    <p>O grupo WordVision foi fundado em 2017 por um grupo de 3 empresas. Número de registro no Gabinete de informação de Moçambique: 123456667GBV</p>
+                    <h4>Nossa Equipe</h4>
+                    <ul>
+                        <li>Director Executivo: Hélio Helton Zibande</li>
+                        <li>Director de informação: Armando da Vera e Venâncio Chico</li>
+                        <li>Chefe de redação: Custódio de Sousa</li>
+                        <li>Sub chefe de redação: Julieta Sheilla Nhamoneque</li>
+                    </ul>
+                    <h4>Localização</h4>
+                    <ul>
+                        <li>Maputo: Av. de Moçambique, bairro de jardim número 3019</li>
+                        <li>Gaza: Cidade de Xai-Xai</li>
+                        <li>Nampula: Cidade de Nampula</li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter Form -->
+                <div class="sidebar-widget newsletter-widget">
+                    <h3 class="widget-title">Receba Notícias no WhatsApp</h3>
+                    <form id="whatsappForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Seu WhatsApp" required>
+                        </div>
+                        <button type="submit" class="btn btn-subscribe">Assinar</button>
+                    </form>
+                </div>
+                
+                <!-- Subscription Table -->
+                <div class="sidebar-widget subscription-widget">
+                    <h3 class="widget-title">Assinaturas</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Plano</th>
+                                <th>Preço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Semanal</td>
+                                <td>1.000 Mts</td>
+                            </tr>
+                            <tr>
+                                <td>Mensal</td>
+                                <td>3.500 Mts</td>
+                            </tr>
+                            <tr>
+                                <td>Trimestral</td>
+                                <td>10.000 Mts</td>
+                            </tr>
+                            <tr>
+                                <td>Anual</td>
+                                <td>35.000 Mts</td>
+                            </tr>
+                            <tr>
+                                <td>PME's (Anual)</td>
+                                <td>27.000 Mts</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Modal Button -->
+                <button class="btn btn-primary btn-block mb-3" data-bs-toggle="modal" data-bs-target="#subscriptionModal">
+                    <i class="fas fa-newspaper mr-2"></i>Assinar Vision Press
+                </button>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="subscriptionModal" tabindex="-1" role="dialog" aria-labelledby="subscriptionModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="subscriptionModalLabel">Assinar Vision Press</h5>
+                    <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close">
+                        
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="subscriptionForm">
+                        <div class="form-group">
+                            <label for="fullName">Nome Completo</label>
+                            <input type="text" class="form-control" id="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">Contacto</label>
+                            <input type="tel" class="form-control" id="contact" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Método de Recebimento</label>
+                            <select class="form-control" id="receiveMethod">
+                                <option>Email</option>
+                                <option>WhatsApp</option>
+                                <option>Ambos</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Duração da Assinatura</label>
+                            <select class="form-control" id="subscriptionDuration">
+                                <option value="1000">Semanal (1.000 Mts)</option>
+                                <option value="3500">Mensal (3.500 Mts)</option>
+                                <option value="10000">Trimestral (10.000 Mts)</option>
+                                <option value="35000">Anual (35.000 Mts)</option>
+                                <option value="27000">PME's Anual (27.000 Mts)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Método de Pagamento</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="payment" id="mpesa" value="mpesa" checked>
+                                <label class="form-check-label" for="mpesa">M-Pesa</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="payment" id="emola" value="emola">
+                                <label class="form-check-label" for="emola">E-Mola</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="payment" id="mkesh" value="mkesh">
+                                <label class="form-check-label" for="mkesh">M-Kesh</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="payment" id="contaMovel" value="contaMovel">
+                                <label class="form-check-label" for="contaMovel">Conta Móvel</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submeter</button>
+                        <button type="button" class="btn bttn-block btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="Imagens/logo.png" alt="Vision Press Logo" class="footer-logo">
+                    <p>Vision Press - Fundado em 2017</p>
+                    <p>Registro: 123456667GBV</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contactos</h4>
+                    <p><i class="fas fa-phone-alt"></i> 858581654 / 21 43 43500</p>
+                    <p><i class="fas fa-envelope"></i> wordvision@co.mz</p>
+                    <h4>Localização</h4>
+                    <p>Maputo, Gaza, Nampula</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="mt-3">
+                        <a href="#" class="btn btn-outline-light btn-sm">Termos de Uso</a>
+                        <a href="#" class="btn btn-outline-light btn-sm">Política de Privacidade</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="copyright">&copy; 2023 Vision Press. Todos os direitos reservados.</p>
+                    <p>Director Executivo: Hélio Helton Zibande</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/popper.min.js"></script>
+</body>
+</html>
